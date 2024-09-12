@@ -1,14 +1,15 @@
 import { useState } from 'react'
 import './App.css'
 
-import Card from './components/Card'
+
+import WelcomePage from './pages/WelcomePage'
 
 function App() {
 
 
   return (
     <>
-      <Card />
+      <WelcomePage />
 
     </>
   )
