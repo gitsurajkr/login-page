@@ -1,8 +1,11 @@
 import React from 'react';
 import { BiUserCircle } from "react-icons/bi";
+import Header from '../components/Header';
 
 const SignInPage = () => {
   return (
+  <>
+    <Header />
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-purple-900 via-black to-purple-900 text-white">
       {/* Whole Display */}
       <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between">
@@ -45,7 +48,7 @@ const SignInPage = () => {
           </p> */}
           <div className="mt-6 text-center">
             <p className="text-sm text-purple-300 mb-2">
-            Forgot your password?
+              Forgot your password?
             </p>
             <a href="/signup" className="text-sm text-purple-300 hover:text-white font-semibold transition duration-200">
               Sign Up
@@ -61,6 +64,7 @@ const SignInPage = () => {
         </div>
       </div>
     </div>
+  </>
   );
 };
 
