@@ -15,8 +15,8 @@ const Header = () => {
         <div className="flex items-center">
           <Link to="/" className="text-2xl font-bold pl-6">StormMart</Link>
           {/* <img src={img} alt="Logo" className='h-5 w-5' /> */}
+          
         </div>
-
         <div className="flex items-center">
           <input
             type="text"
