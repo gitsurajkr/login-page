@@ -18,7 +18,7 @@ const Topbar = () => {
         <InputBase
           sx={{ ml: 2, flex: 1, color: "white" }} // Input text color white
           placeholder="Search"
-          placeholderTextColor="white" // Placeholder text color
+          placeholdertextcolor="white" // Placeholder text color
         />
         <IconButton type="button" sx={{ p: 1, color: "white" }}>
           <SearchIcon />

@@ -1,23 +1,22 @@
-import { Box } from "@mui/material";
-// import { PieChart } from '@mui/x-charts/PieChart';
-import { PieChart } from '@mui/x-charts';
+import { Box, useTheme } from "@mui/material";
+import { tokens } from "../../theme";
 
-import React from "react";
-const ProgressCircle = ({ progress }) => {
-  return <Box>
-  <PieChart
-  series={[
-    {
-      data: [
-        { id: 0, value: 10 },
-        { id: 1, value: 15 },
-        { id: 2, value: 20 },
-      ],
-    },
-  ]}
-  width={170}
-  height={100}
-/></Box>;
+const ProgressCircle = ({ progress = "0.75", size = "40" }) => {
+  const theme = useTheme();
+  const colors = tokens(theme.palette.mode);
+  const angle = progress * 360;
+  return (
+    <Box
+      sx={{
+        background: `radial-gradient(${colors.primary[500]} 58%, transparent 60%),
+            conic-gradient(transparent 0deg ${angle}deg, ${colors.blueAccent[500]} ${angle}deg 360deg),
+            ${colors.greenAccent[500]}`,
+        borderRadius: "50%",
+        width: `${size}px`,
+        height: `${size}px`,
+      }}
+    />
+  );
 };
 
 export default ProgressCircle;
